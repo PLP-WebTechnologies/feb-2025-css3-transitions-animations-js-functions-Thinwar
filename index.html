@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Theme Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Theme Customizer</h1>
+            <p>Create your perfect interface and save your preferences</p>
+        </header>
+
+        <main>
+            <section class="card" id="theme-card">
+                <h2>Choose Your Theme</h2>
+                <div class="theme-options">
+                    <button class="theme-btn" data-theme="theme-blue">Blue</button>
+                    <button class="theme-btn" data-theme="theme-purple">Purple</button>
+                    <button class="theme-btn" data-theme="theme-green">Green</button>
+                    <button class="theme-btn" data-theme="theme-orange">Orange</button>
+                </div>
+            </section>
+
+            <section class="card" id="animation-card">
+                <h2>Animation Playground</h2>
+                <div class="animation-box">
+                    <div class="animated-element" id="animated-box">
+                        <span>Click or Hover!</span>
+                    </div>
+                </div>
+                <div class="animation-controls">
+                    <button id="bounce-btn">Bounce</button>
+                    <button id="rotate-btn">Rotate</button>
+                    <button id="pulse-btn">Pulse</button>
+                    <button id="shake-btn">Shake</button>
+                </div>
+                <label class="toggle-container">
+                    <input type="checkbox" id="auto-animation">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Auto-animate</span>
+                </label>
+            </section>
+
+            <section class="card" id="settings-card">
+                <h2>Advanced Settings</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="animation-speed">Animation Speed:</label>
+                        <input type="range" id="animation-speed" min="0.5" max="2" step="0.1" value="1">
+                        <span id="speed-value">1x</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="animation-size">Element Size:</label>
+                        <input type="range" id="animation-size" min="100" max="200" step="10" value="150">
+                        <span id="size-value">150px</span>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="rounded-corners">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Rounded Corners</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="show-shadow">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Show Shadow</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="save-card">
+                <h2>Save Your Settings</h2>
+                <div class="save-controls">
+                    <button id="save-btn">Save Preferences</button>
+                    <button id="reset-btn">Reset to Default</button>
+                </div>
+                <div id="status-message"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Your preferences are automatically saved in your browser's localStorage.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
